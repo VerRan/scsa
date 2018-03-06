@@ -1,0 +1,89 @@
+#{extends 'main.html' /} #{set title:'register' /}
+<ol class="breadcrumb">
+	<li><a href="@{Application.main()}">首页</a></li> 
+	<li class="active">注册</li>
+	
+</ol>
+<form class="form-horizontal" role="form"
+	action="@{Application.register()}" method="POST">
+	
+	<div class="form-group">
+		<label for="email" class="col-md-4 control-label">邮箱:</label>
+		<div class="col-md-4">
+			<input type="email" class="form-control" id="email"
+				name="sysUser.email" placeholder="请输入邮箱">
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label for="password" class="col-md-4 control-label">&{'password'}:</label>
+		<div class="col-md-4">
+			<input type="password" class="form-control" id="password"
+				name="sysUser.password" placeholder="请输入密码">
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label for="userName" class="col-md-4 control-label">
+			&{'userName'}:</label>
+		<div class="col-md-4">
+			<input type="text" class="form-control" id="userName"
+				name="sysUser.userName" placeholder="请输入名字"> 
+		</div>
+	</div>
+
+
+	<div class="form-group">
+		<label for="telPhone" class="col-md-4 control-label">电话</label>
+		<div class="col-md-4">
+			<input type="text" class="form-control" id="telPhone"
+				name="sysUser.telPhone" placeholder="请输入手机号">
+		</div>
+	</div>
+
+
+
+
+
+	<div class="form-group">
+			<label for="age" class="col-md-4 control-label">性别:</label>
+		<div class="col-md-4">
+
+			<label class="checkbox-inline"> <input type="radio"
+				name="sysUser.sex" id="sex" value="男" checked> 男
+			</label> <label class="checkbox-inline"> <input type="radio"
+				name="sysUser.sex" id="sex" value="女"> 女
+			</label>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="age" class="col-md-4 control-label">年龄:</label>
+		<div class="col-md-4">
+			<input type="text" class="form-control" id="age" name="sysUser.age"
+				placeholder="请输入年龄">
+
+
+		</div>
+
+
+	</div>
+
+
+	<div class="form-group">
+		<label for="address" class="col-md-4 control-label">地址:</label>
+		<div class="col-md-4"> 
+				
+				<textarea class="form-control" rows="3"  name="sysUser.address" placeholder="请输入地址"  ></textarea>
+		</div>
+	</div>
+
+
+
+
+	<div class="form-group">
+		<div class="col-md-offset-4 col-md-4">
+			<button type="submit" class="btn btn-primary btn-lg btn-block">注册</button>
+		</div>
+	</div>
+</form>

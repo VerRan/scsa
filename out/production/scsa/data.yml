@@ -1,0 +1,53 @@
+# you describe your data using the YAML notation here
+# and then load them using Fixtures.load("data.yml")
+
+# User(bob):
+#   email: bob@gmail.com
+#   password: secret
+#   fullname: Bob
+
+SysUser(admin):
+   userName : 管理员
+   email : admin
+   password : 123456
+   telPhone : 15319746639
+   role : administrator
+   sex: 男
+   age : 32
+   
+City(西安):
+    cityCode : 290
+    cityName : 西安
+City(咸阳):
+    cityCode : 910
+    cityName : 咸阳
+    
+School(西安交通大学) : 
+    schoolCode : SC001
+    schoolName : 西安交通大学
+    schoolDesc : 西安交通大学
+    city : 西安   
+School(咸阳师范学院) : 
+    schoolCode : SC002
+    schoolName : 咸阳师范学院
+    schoolDesc : 咸阳师范学院
+    city : 咸阳
+    
+Major(计算机科学与技术) :
+    majorCode : mj001
+    majorName : 计算机科学与技术   
+Major(机械制造) :
+    majorCode : mj002
+    majorName : 机械制造      
+
+Course(计算机组成原理) :
+    courseCode : cs001
+    courseName : 计算机总成原理
+Course(Java 基础   ) :
+    courseCode : cs002
+    courseName : Java 基础       
+Course(AutoCAD) :
+    courseCode : cs003
+    courseName : AutoCAD      
+     
+     

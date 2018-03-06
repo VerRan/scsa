@@ -1,0 +1,84 @@
+ #{extends 'main.html' /} #{set title:'选课页面' /}
+
+<ol class="breadcrumb">
+	<li><a href="@{Application.main()}">首页</a></li> 
+	<li class="active">选课</li>
+	
+</ol>
+ 
+  <form class="form-horizontal" role="form"
+	action="@{Application.selectCourseSave()}" method="POST">
+	 #{authenticityToken /}
+	<div class="form-group">
+		<label for="firstname" class="col-md-4 control-label">
+			&{'userName'}:</label>
+			
+			<div class="col-md-4">
+			<input type="text" class="form-control" id="userName"
+				name="userName" value="${sysUser.userName}" disabled>
+		</div> 
+	</div>
+	<div class="form-group">
+		<label for="telPhone" class="col-md-4 control-label">
+			&{'telPhone'}:</label> 
+			
+					<div class="col-md-4">
+			<input type="text" class="form-control" id="telPhone"
+				name="telPhone" value="${sysUser.telPhone}" disabled>
+		</div> 
+		
+		
+	</div>
+		<div class="form-group">
+		<label for="email" class="col-md-4 control-label">
+			&{'email'}:</label> 
+			
+					<div class="col-md-4">
+			<input type="text" class="form-control" id="email"
+				name="email" value="${sysUser.email}" disabled>
+		</div>		
+	</div>
+	
+ 	<div class="form-group">
+		<label for="city" class="col-md-4 control-label">
+			选择所在区域:</label> 
+			<div class="col-md-4"> 
+				#{select 'studentCourses.cityName', items:citys, valueProperty:'cityName', labelProperty:'cityName', value:910, class:'form-control', id:'cityName' /}
+				
+		</div>
+	</div>
+	
+	 	<div class="form-group">
+		<label for="school" class="col-md-4 control-label">
+			选择学校:</label> 
+			<div class="col-md-4"> 
+				#{select 'studentCourses.schoolName', items:schools, valueProperty:'schoolName', labelProperty:'schoolName', value:001, class:'form-control', id:'schoolName' /}
+		</div>
+	</div>
+	
+		 	<div class="form-group">
+		<label for="major" class="col-md-4 control-label">
+			选择专业:</label> 
+			<div class="col-md-4"> 
+				
+					#{select 'studentCourses.majorName', items:majors, valueProperty:'majorName', labelProperty:'majorName', value:001, class:'form-control', id:'majorName' /}
+					
+					
+		</div>
+	</div>
+	
+		 	<div class="form-group">
+		<label for="course" class="col-md-4 control-label">
+			选择课程:</label> 
+			<div class="col-md-4"> 
+				
+	#{select 'studentCourses.courseName', items:courses, valueProperty:'courseName', labelProperty:'courseName', value:001, class:'form-control', id:'courseName' /}
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div class="col-md-offset-4 col-md-4">
+			<button type="submit" class="btn btn-primary btn-lg btn-block" >申请</button>
+		</div>
+	</div>
+</form>  

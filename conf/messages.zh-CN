@@ -1,0 +1,97 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+
+validation.required=%s 是必填属性
+userName=姓名
+password=密         码
+loginButtonName=登录
+returnIndex=返回首页
+loginSuc=登录成功！
+welcome=%s欢迎您！
+saveButton=保存
+registerButton=注册
+productId=产品编码
+productName=产品名称
+validation.required.productName=产品名称为必填属性
+
+
+# play/modules/secure 
+secure.username = 用户名： 
+secure.password = 密码： 
+secure.signin = 登 陆
+secure.remember = 记住我
+
+# play/modules/crud
+crud.title=选课系统后台管理
+crud.index.title=选择要编辑的信息
+crud.home = 首页
+crud.index.objectType = 系统数据维护
+crud.index.add = 添加
+crud.save = 保存 
+crud.saveAndAddAnother = 继续添加
+crud.saveAndContinue = 继续修改 
+crud.cancel = 取消 
+crud.add =  添加 &{%s} 
+crud.show.title = 修改 &{%s} 
+crud.list.title = &{%s} 
+crud.list.size = %d &{%s} 
+crud.list.totalSize = 总计 %d条
+crud.pagination.previous = « 前一页 
+crud.pagination.next = 后一页 » 
+crud.pagination.last = 最后一页 »» 
+crud.pagination.first = «« 首页 
+crud.blank.title = 添加&{%s}  
+crud.delete = 删除&{%s}  
+crud.created = &{%s} 创建成功！
+crud.saved = &{%s} 保存成功！ 
+crud.deleted = &{%s} 删除成功！
+crud.search = 查询 
+crud.none = (请选择) 
+crud.hasErrors = 请修改错误信息 ！
+
+# 业务数据本地化
+Citys=城市管理
+City=城市
+cityCode=城市编码
+cityName=城市名称
+
+Courses=课程管理
+Course=课程
+courseCode=课程编码
+courseName=课程名称
+courseDesc=课程描述
+createDate=创建时间
+
+
+Students=学生管理
+Student=学生
+studentName=学生名称
+sex=性别
+age=年龄
+studentCode=学生编码
+
+Majors=专业管理
+Major=专业
+majorCode=专业编码
+majorName=专业名称
+majorDesc=专业描述
+
+Schools=学校管理
+School=学校
+schoolCode=学校编码
+schoolName=学校名称
+schoolDesc=学校介绍
+city=所属地区
+ 
+ StudentCoursess=选课信息管理
+ StudentCourses=选课信息
+ student=学生信息
+ course=课程信息
+ 
+ SysUsers=系统用户管理
+ SysUser=系统用户
+ telPhone=手机号码
+ email=邮箱
+ age=年龄
+ address=地址

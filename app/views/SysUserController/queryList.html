@@ -1,0 +1,9 @@
+#{extends 'main.html' /}
+#{set title:'product' /}
+<h1>系统注册用户列表</h1>
+#{list list, as:'sysuser'}
+	<li>${sysuser.userName}   |   ${sysuser.password} |<a href="@{SysUserController.editPage()}?id=${sysuser.id} ">编辑</a>
+	|<a href="@{SysUserController.delete()}?id=${sysuser.id} ">删除</a>
+	|<a href="@{SysUserController.show()}?id=${sysuser.id} ">查看</a>
+	</li>
+#{/list} 

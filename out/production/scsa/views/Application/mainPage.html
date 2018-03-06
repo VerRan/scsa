@@ -1,0 +1,54 @@
+#{extends 'main.html' /} 
+#{set title:'选课系统首页' /}
+
+<ul class="nav nav-pills ">
+	<li><a href="@{Application.selectCourse()}">选课</a>
+	</li> 
+	<li><a href="#"  data-toggle="popover" title="Example popover" >学习</a></li>
+	<li><a href="#">考试</a></li>
+	<li><a href="#">测试</a></li>
+	<li class="dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			帮助<span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu">
+			<li><a href="#">选课流程</a></li>
+			<li><a href="#">学习流程</a></li>
+			<li><a href="#">测试流程</a></li>
+			<li class="divider"></li>
+			<li><a href="#">联系我们</a></li>
+		</ul>
+	</li>  
+	<li><a href="@{Application.sysUserInfo()}">个人信息</a></li>
+	<li><a href="@{Application.index()}">退出</a></li>
+</ul>
+
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">我的已选课程</h3>
+    </div>
+	<div class="panel-body">
+			<table class="table table-striped">
+				<thead>
+					<tr> 
+						<th>课程名称</th>
+						<th>专业名称</th>
+						<th>学校名称</th>
+						<th>地区名称</th>
+					</tr>
+				</thead>
+				<tbody>
+				#{list studentCourseList, as:'studentCourse'} 
+						<tr >
+						<td>${studentCourse.courseName}</td>
+						<td>${studentCourse.majorName}</td>
+						<td>${studentCourse.schoolName}</td>
+						<td>${studentCourse.cityName}</td>
+					</tr>
+				#{/list}  
+				</tbody>
+			</table>
+		</div> 
+	</div>
+
+

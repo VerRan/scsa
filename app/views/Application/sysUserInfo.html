@@ -1,0 +1,79 @@
+#{extends 'main.html' /} #{set title:'个人信息' /}
+<ol class="breadcrumb">
+	<li><a href="@{Application.main()}">首页</a></li> 
+	<li class="active">个人信息</li>
+	
+</ol>
+<h3 align="center"> 个人信息 </h3>
+<form class="form-horizontal" action="@{Application.modifyUserInfo()}"  role="form" method="POST">
+   <input type="hidden" name ="sysUser.id"  value ="${sysUser.id}"  />
+		<div class="form-group">
+		<label for="userName" class="col-md-4 control-label">
+			&{'userName'}:</label>
+		<div class="col-md-4"> 
+				 <label for="userName" class="col-md-4 control-label">${sysUser.userName}</label> 
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="email" class="col-md-4 control-label">邮箱:</label>
+		<div class="col-md-4">		
+			<label for="email" class="col-md-4 control-label">${sysUser.email}</label> 
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label for="password" class="col-md-4 control-label">&{'password'}:</label>
+		<div class="col-md-4">
+			<input type="password" class="form-control" id="password"
+				name="sysUser.password"  value="${sysUser.password}" placeholder="请输入密码">
+		</div>
+	</div>
+	
+
+
+
+	<div class="form-group">
+		<label for="telPhone" class="col-md-4 control-label">电话</label>
+		<div class="col-md-4">
+			<input type="text" class="form-control" id="telPhone"
+				name="sysUser.telPhone" value="${sysUser.telPhone}"  placeholder="请输入手机号">
+		</div>
+	</div>
+
+
+	<div class="form-group">
+			<label for="age" class="col-md-4 control-label">性别:</label>
+		<div class="col-md-4">
+   		<label for="age" class="col-md-4 control-label">${sysUser.sex}</label>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="age" class="col-md-4 control-label">年龄:</label>
+		<div class="col-md-4">
+			<input type="text" class="form-control" id="age" name="sysUser.age" value="${sysUser.age}"  placeholder="请输入年龄">
+
+
+		</div>
+
+
+	</div>
+
+
+	<div class="form-group">
+		<label for="address" class="col-md-4 control-label">地址:</label>
+		<div class="col-md-4"> 
+				
+				<textarea class="form-control" rows="3"  name="sysUser.address"   placeholder="请输入地址"  >${sysUser.address}</textarea>
+		</div>
+	</div>
+
+
+
+
+	<div class="form-group">
+		<div class="col-md-offset-4 col-md-4">
+			<button type="submit" class="btn btn-primary btn-lg btn-block">修改</button>
+		</div>
+	</div>
+</form>

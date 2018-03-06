@@ -1,0 +1,17 @@
+#{extends 'main.html' /}
+#{set title:'showPage' /}
+ 
+ #{if flash.error}
+<p style="color:#c00">
+	${flash.error}
+</p>
+#{/if}
+  <table align="center" valgin="middle" >
+  <tr><td>
+  &{'userName'}: ${sysUser.userName}
+  	</td>
+  	</tr>
+  	  <tr><td>
+  	&{'password'}: ${sysUser.password}
+  		</td>
+  </table> 

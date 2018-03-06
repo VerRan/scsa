@@ -1,0 +1,20 @@
+#{extends 'main.html' /}
+#{set title:'editpage' /}
+
+ #{form @SysUserController.edit(),method:'POST',id:'eidtForm'}
+  <table align="center" valgin="middle" >
+   <input type="hidden" name ="sysUser.id"  value ="${sysUser.id}"  />
+  <tr><td>
+  &{'userName'}: <input type="text" name ="sysUser.userName"  value ="${sysUser.userName}"  />
+  	</td>
+  	</tr>
+  	  <tr><td>
+  	&{'password'}: <input type="password" name ="sysUser.password"  value ="${sysUser.password}"  />
+  		</td>
+  	</tr>
+  	  <tr><td>
+		<input type="submit" value="&{'saveButton'}"/>
+		</td>
+  	</tr>
+  </table>
+ #{/form}
